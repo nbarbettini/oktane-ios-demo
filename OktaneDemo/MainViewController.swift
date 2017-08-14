@@ -9,7 +9,7 @@
 import UIKit
 import OktaAuth
 
-class ViewController: UIViewController {
+class MainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,11 +22,12 @@ class ViewController: UIViewController {
     }
 
     @IBAction func loginWasPressed(_ sender: Any) {
-        OktaAuth.login()
+        OktaAuth
+            .login()
             .start(self) {
                 response, error in
                 
-                print("callback!")
+                if error != nil { print(error!) }
                 
                 if response != nil {
                     
@@ -34,10 +35,17 @@ class ViewController: UIViewController {
                     OktaAuth.userinfo() {
                         response, error in
                         
-                        response!.forEach { print("\($0): \($1)") }
+                        if error != nil { print(error!) }
                         
-                        let home = self.storyboard?.instantiateViewController(withIdentifier: "MainController")
-                        self.present(home!, animated: false, completion: nil)
+                        let profileView = self.storyboard?.instantiateViewController(
+                            withIdentifier: "profile") as! ProfileViewController
+                        
+                        profileView.email = String(describing: response!["preferred_username"]!)
+                        profileView.givenName = String(describing: response!["given_name"]!)
+                        
+                        DispatchQueue.main.async(execute: {
+                            self.present(profileView, animated: true, completion: nil)
+                        })
                     }
                 }
         }
