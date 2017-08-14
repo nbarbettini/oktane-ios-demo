@@ -27,7 +27,7 @@
 			<string></string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>com.okta.oktane17.OktaneDemo</string>
+				<string>com.okta.oktane17.oktanedemo</string>
 			</array>
 		</dict>
 	</array>

@@ -3,11 +3,11 @@
 <plist version="1.0">
     <dict>
         <key>issuer</key>
-        <string>{oktaOrg}</string>
+        <string>https://oktane-app-dev.oktapreview.com</string>
         <key>clientId</key>
-        <string>{clientIdValue}</string>
+        <string>0oabmleuwnKdEux5m0h7</string>
         <key>redirectUri</key>
-        <string>{redirectUrlValue}</string>
+        <string>com.okta.oktane17.oktanedemo://callback</string>
         <key>scopes</key>
         <array>
             <string>offline_access</string>

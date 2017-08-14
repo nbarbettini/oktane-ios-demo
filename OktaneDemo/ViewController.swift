@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import OktaAuth
 
 class ViewController: UIViewController {
 
@@ -20,6 +21,28 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func loginWasPressed(_ sender: Any) {
+        OktaAuth.login()
+            .start(self) {
+                response, error in
+                
+                print("callback!")
+                
+                if response != nil {
+                    
+                    // Get the user info
+                    OktaAuth.userinfo() {
+                        response, error in
+                        
+                        response!.forEach { print("\($0): \($1)") }
+                        
+                        let home = self.storyboard?.instantiateViewController(withIdentifier: "MainController")
+                        self.present(home!, animated: false, completion: nil)
+                    }
+                }
+        }
+        
+    }
 
 }
 
