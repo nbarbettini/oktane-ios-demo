@@ -2,14 +2,15 @@
 //  ViewController.swift
 //  OktaneDemo
 //
-//  Created by Nathanael Barbettini on 8/14/17.
-//  Copyright © 2017 Okta. All rights reserved.
-//
 
 import UIKit
 import OktaAuth
 
 class MainViewController: UIViewController {
+    
+    
+    @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var loginButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,15 +23,20 @@ class MainViewController: UIViewController {
     }
 
     @IBAction func loginWasPressed(_ sender: Any) {
+        loadingIndicator.startAnimating()
+        loginButton.isHidden = true
+        
         OktaAuth
             .login()
             .start(self) {
                 response, error in
                 
-                OktaAuth.userinfo() {
-                    response, error in
-                    
-                    self.showProfileWith(data: response!)
+                if let _ = response {
+                    OktaAuth.userinfo() {
+                        response, error in
+                        
+                        self.showProfileWith(data: response!)
+                    }
                 }
         }
     }
@@ -46,6 +52,5 @@ class MainViewController: UIViewController {
             self.present(profileView, animated: true, completion: nil)
         })
     }
-
 }
 

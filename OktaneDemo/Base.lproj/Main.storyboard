@@ -22,37 +22,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="EaS-Tj-VAA">
-                                <rect key="frame" x="15" y="671" width="384" height="50"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yuG-j5-UYN">
-                                        <rect key="frame" x="0.0" y="0.0" width="384" height="50"/>
-                                        <color key="backgroundColor" red="0.40000000600000002" green="1" blue="0.40000000600000002" alpha="0.84471318493150682" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                        <state key="normal" title="Log in">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="loginWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wBu-f3-tO4"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yuG-j5-UYN">
+                                <rect key="frame" x="20" y="671" width="374" height="50"/>
+                                <color key="backgroundColor" red="0.40000000600000002" green="1" blue="0.40000000600000002" alpha="0.84471318493150682" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="RZQ-tg-EJR"/>
+                                    <constraint firstAttribute="height" constant="50" id="roE-cF-7gY"/>
                                 </constraints>
-                            </stackView>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="Log in">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wBu-f3-tO4"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="gBF-yo-3GU">
+                                <rect key="frame" x="189" y="453" width="37" height="37"/>
+                            </activityIndicatorView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="EaS-Tj-VAA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3A7-fA-0S2"/>
-                            <constraint firstItem="EaS-Tj-VAA" firstAttribute="width" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="width" constant="-30" id="LNE-Br-Peu"/>
-                            <constraint firstItem="EaS-Tj-VAA" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" constant="-15" id="WA2-Cg-GQC"/>
+                            <constraint firstItem="yuG-j5-UYN" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="NDM-x9-e8I"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="yuG-j5-UYN" secondAttribute="bottom" constant="15" id="fjK-UO-PRL"/>
+                            <constraint firstItem="gBF-yo-3GU" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="433" id="irG-4L-ppL"/>
+                            <constraint firstItem="yuG-j5-UYN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="r1P-lF-xJ5"/>
+                            <constraint firstItem="gBF-yo-3GU" firstAttribute="centerX" secondItem="yuG-j5-UYN" secondAttribute="centerX" id="yc1-ZI-T6P"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="loadingIndicator" destination="gBF-yo-3GU" id="h24-rA-OMr"/>
+                        <outlet property="loginButton" destination="yuG-j5-UYN" id="Aja-xC-vNx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
+            <point key="canvasLocation" x="136.23188405797103" y="136.95652173913044"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="hlo-Rj-mhb">

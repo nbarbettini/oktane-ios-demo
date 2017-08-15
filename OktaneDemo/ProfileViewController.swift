@@ -2,9 +2,6 @@
 //  ProfileViewController.swift
 //  OktaneDemo
 //
-//  Created by Nathanael Barbettini on 8/14/17.
-//  Copyright © 2017 Okta. All rights reserved.
-//
 
 import UIKit
 
