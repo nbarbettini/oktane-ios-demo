@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  OktaneDemo
+//  Atko Partner App
 //
 
 import UIKit

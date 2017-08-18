@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  OktaneDemo
+//  Atko Partner App
 //
 
 import UIKit
@@ -23,22 +23,7 @@ class MainViewController: UIViewController {
     }
 
     @IBAction func loginWasPressed(_ sender: Any) {
-        loadingIndicator.startAnimating()
-        loginButton.isHidden = true
-        
-        OktaAuth
-            .login()
-            .start(self) {
-                response, error in
-                
-                if let _ = response {
-                    OktaAuth.userinfo() {
-                        response, error in
-                        
-                        self.showProfileWith(data: response!)
-                    }
-                }
-        }
+
     }
     
     func showProfileWith(data: [String : Any]) {
@@ -47,6 +32,7 @@ class MainViewController: UIViewController {
         
         profileView.email = String(describing: data["preferred_username"]!)
         profileView.givenName = String(describing: data["given_name"]!)
+        profileView.surname = String(describing: data["family_name"]!)
         
         DispatchQueue.main.async(execute: {
             self.present(profileView, animated: true, completion: nil)

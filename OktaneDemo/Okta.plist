@@ -2,12 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>redirectUri</key>
+	<string>com.oktapreview.oktane-app-dev:/callback</string>
 	<key>issuer</key>
 	<string>https://oktane-app-dev.oktapreview.com</string>
 	<key>clientId</key>
-	<string>0oabmleuwnKdEux5m0h7</string>
-	<key>redirectUri</key>
-	<string>com.okta.oktane17.oktanedemo:/callback</string>
+	<string>0oabnyiafiV947fC50h7</string>
 	<key>scopes</key>
 	<array>
 		<string>offline_access</string>

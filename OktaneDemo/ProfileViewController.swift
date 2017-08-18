@@ -1,6 +1,6 @@
 //
 //  ProfileViewController.swift
-//  OktaneDemo
+//  Atko Partner App
 //
 
 import UIKit
@@ -16,7 +16,6 @@ class ProfileViewController : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        nameLabel.text = "Hello, \(givenName)!"
-        emailLabel.text = email
+        nameLabel.text = "\(givenName) \(surname)"
     }
 }
