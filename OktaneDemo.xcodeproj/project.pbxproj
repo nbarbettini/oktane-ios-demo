@@ -17,6 +17,7 @@
 		4372CF121F4249E4004F328D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4372CF101F4249E4004F328D /* LaunchScreen.storyboard */; };
 		4372CF1A1F424B7E004F328D /* Okta.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4372CF191F424B7E004F328D /* Okta.plist */; };
 		438055121F425E4400A21FD9 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438055111F425E4400A21FD9 /* ProfileViewController.swift */; };
+		DB590C5D1F4DFC940092E656 /* 4NS5QFeKbOVfx7.png in Resources */ = {isa = PBXBuildFile; fileRef = DB590C5C1F4DFC940092E656 /* 4NS5QFeKbOVfx7.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		438055111F425E4400A21FD9 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		D481CC1A3C916E437DBB8BCF /* Pods_OktaneDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OktaneDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6E612AF87B565B71298F56A /* Pods-OktaneDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OktaneDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-OktaneDemo/Pods-OktaneDemo.release.xcconfig"; sourceTree = "<group>"; };
+		DB590C5C1F4DFC940092E656 /* 4NS5QFeKbOVfx7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4NS5QFeKbOVfx7.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 			children = (
 				430679D31F4794BE00617DB9 /* Kdi4VVw5Ir5wkV.png */,
 				430679D51F4794C900617DB9 /* j3rZpOG6lEWLxu.png */,
+				DB590C5C1F4DFC940092E656 /* 4NS5QFeKbOVfx7.png */,
 				4372CF071F4249E4004F328D /* AppDelegate.swift */,
 				4372CF091F4249E4004F328D /* MainViewController.swift */,
 				438055111F425E4400A21FD9 /* ProfileViewController.swift */,
@@ -163,6 +166,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4372CF121F4249E4004F328D /* LaunchScreen.storyboard in Resources */,
+				DB590C5D1F4DFC940092E656 /* 4NS5QFeKbOVfx7.png in Resources */,
 				430679D61F4794C900617DB9 /* j3rZpOG6lEWLxu.png in Resources */,
 				430679D41F4794BE00617DB9 /* Kdi4VVw5Ir5wkV.png in Resources */,
 				4372CF0F1F4249E4004F328D /* Assets.xcassets in Resources */,

@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  Atko Partner App
+//  Atko Customer App
 //
 
 import UIKit
